@@ -1,1 +1,1 @@
-# Graph_Clustering
+# Algorithms for Graph Clustering
