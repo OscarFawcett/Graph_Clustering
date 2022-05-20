@@ -1,4 +1,4 @@
-This folder contains python implementations of various clustering methods, including:  
+This folder contains python implementations of various clustering methods, including:
 * n-cut
 * kmeans
 * NMFR
