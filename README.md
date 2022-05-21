@@ -6,6 +6,6 @@ The purpose of this repository is to help anyone who wishes to find the hidden g
 
 We define a graph *G* as *G = (V,E)*, where *V* is the set of vertices or nodes, and *E* is the set of connections or edges such that *E* is a subset of *V x V*.
 
-![alt text](cover art.PNG)
+![alt text](graph_example.PNG)
 
 # Clustering Algorithms
