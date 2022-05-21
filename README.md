@@ -4,5 +4,6 @@ The purpose of this repository is to help anyone who wishes to find the hidden g
 
 # Defining the Problem
 
+We define a graph *G* as 
 
 # Clustering Algorithms
