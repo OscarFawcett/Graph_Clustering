@@ -8,6 +8,6 @@ We define a graph $G$ as $G = (V, E)$, where *V* is the set of vertices or nodes
 
 ![Graph Example](images/graph_example.PNG)
 
-Usually, this data will be given in what is known as an adjacency matrix. The adjacency matrix $A$ is an $n \times n$ matrix, where $n$ represents the number of nodes in the graph. Element $A_ij = 1$ if an edge exists between nodes $i$ and $j$, and 0 otherwise. 
+Usually, this data will be given in what is known as an adjacency matrix. The adjacency matrix $A$ is an $n \times n$ matrix, where $n$ represents the number of nodes in the graph. Element $A<sub>ij</sub> = 1$ if an edge exists between nodes $i$ and $j$, and 0 otherwise. 
 
 # Clustering Algorithms
