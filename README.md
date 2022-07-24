@@ -8,6 +8,24 @@ We define a graph $G$ as $G = (V, E)$, where *V* is the set of vertices or nodes
 
 ![Graph Example](images/graph_example.PNG)
 
-Usually, this data will be given in what is known as an adjacency matrix. The adjacency matrix $A$ is an $n \times n$ matrix, where $n$ represents the number of nodes in the graph. Element $A$<sub>ij</sub> equals 1 if an edge exists between nodes $i$ and $j$, and 0 otherwise. 
+Usually, this data will be given in what is known as an adjacency matrix. The adjacency matrix $A$ is an $n \times n$ matrix, where $n$ represents the number of nodes in the graph. Element $A$<sub>ij</sub> equals 1 if an edge exists between nodes $i$ and $j$, and 0 otherwise. For large graphs, using a sparse matrix will speed up the run time.
 
 # Clustering Algorithms
+
+This repository contains code or direction to packages that run various different graph clustering algorithms, including:
+
+* Label Propogation
+* Kmeans
+* Ncut
+* Louvain
+* Nonnegative Matrix Factorization Using Graph Random Walk (NMFR)
+
+## Label Propogation
+
+## Kmeans
+
+## Ncut
+
+## Louvain
+
+## NMFR
