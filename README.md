@@ -27,10 +27,13 @@ Now, we'll go over some basic information regarding each graph clustering method
 ## Label Propagation
 
 The basic idea behind the label propagation method is to assign each node to the cluster that is most prevelent amongst its neighbors. It was developed by Xiaojin Zhu and Zoubin Ghahramani in 2002 [1]. The basic algorithm can be described as follows:
+
 1) Initialize the graph so each node has its own cluster.
 2) Arrange all the nodes in the graph in a random order.
 3) For each node in that order, assign it to the cluster that is most common amongst its neighbors. Ties are broken uniformly randomly.
 4) If every node is in the cluster that the maximum number of their neighbors have, then stop the algorithm. Else, go to (2).
+
+What is nice about the label propagation method is that it is easy to implement and quick to run. Label Propagation also does not require any prior knowledge to run, unlike some other methods to be discussed.
 
 ## Kmeans
 
