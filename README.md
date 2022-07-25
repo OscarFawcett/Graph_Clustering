@@ -17,7 +17,7 @@ For graph clustering, also known as community detection, can be informally defin
 This repository contains code or direction to packages that run various different graph clustering algorithms, including:
 
 * Label Propagation
-* Kmeans
+* K-means
 * Normalized Spectral Clustering (Ncut)
 * Louvain
 * Nonnegative Matrix Factorization Using Graph Random Walk (NMFR)
@@ -35,9 +35,9 @@ The basic idea behind the label propagation method is to assign each node to the
 
 What is nice about the label propagation method is that it is easy to implement and quick to run. Label Propagation also does not require any prior knowledge to run, unlike some other methods to be discussed.
 
-## Kmeans
+## K-means
 
-Though it is usually applied to euclidean data, the kmeans clustering method has adaptations to graphs. This is done by embedding the graph into another, low-dimensional space, then applying the typical kmeans methodology [2]. The basic algorithm can be described as follows:
+Though it is usually applied to euclidean data, the k-means clustering method has adaptations to graphs. This is done by embedding the graph into another, low-dimensional space, then applying the typical k-means methodology [2]. The basic algorithm can be described as follows:
 
 1) Embed the graph into a lower-dimensional space using any desired method.
 2) Initialize $k$ centroids randomly, where $k$ is the number of clusters in the graph.
@@ -45,11 +45,11 @@ Though it is usually applied to euclidean data, the kmeans clustering method has
 4) Recalculate the positions of the centroids to be in the center of their associated nodes.
 5) Repeat steps (3) and (4) until no changes are made.
 
-Once the graph has been embedded into a lower-dimensional space where distance measures can be calculated, kmeans is an easy-to-use method that only requires a preset number of clusters to calculate. However, determining the best method to embed the graph tends to be the tricky part. There are also other adaptations of kmeans to graphs, such as the algorithms proposed by Sami Sieranoja & Pasi Fränti [3]. 
+Once the graph has been embedded into a lower-dimensional space where distance measures can be calculated, k-means is an easy-to-use method that only requires a preset number of clusters to calculate. However, determining the best method to embed the graph tends to be the tricky part. There are also other adaptations of k-means to graphs, such as the algorithms proposed by Sami Sieranoja & Pasi Fränti [3]. 
 
 ## Ncut
 
-The normalized spectral clustering method relies on two things: the Laplacian matrix, which is a transformation of the adjacency matrix discussed earlier, and eigenvalues, which are special scalars associated with a given matrix. It will then use the kmeans algorithm to cluster using the gathered eigenvalues, so in a sense ncut is a special case of kmeans. The basic algorithm for ncut can be described as follows:
+The normalized spectral clustering method relies on two things: the Laplacian matrix, which is a transformation of the adjacency matrix discussed earlier, and eigenvalues, which are special scalars associated with a given matrix. It will then use the k-means algorithm to cluster using the gathered eigenvalues, so in a sense ncut is a special case of k-means. The basic algorithm for ncut can be described as follows:
 
 1) Compute the Laplacian matrix $L$.
 2) Compute the normalized Laplacian matrix $L$<sub>norm</sub>.
@@ -58,6 +58,8 @@ The normalized spectral clustering method relies on two things: the Laplacian ma
 5) Form matrix $T$ by normalizing the rows of $U$ to norm 1.
 6) For $i = 1, . . . , n$, let $y_i$ be the vector corresponding to the $i$-th row of $T$.
 7) Cluster the points $(y_i)$<sub>i=1,...,n</sub> with the k-means algorithm into clusters $C_1, . . . , C_k$.
+
+The Ncut method is a very powerful clustering tool that runs quickly and doesn't make strong assumptions on the formation of clusters [4]. 
 
 ## Louvain
 
@@ -70,3 +72,5 @@ The normalized spectral clustering method relies on two things: the Laplacian ma
 [2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), Scikit-network: Graph Analysis in Python. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html
 
 [3] Sieranoja, S., Fränti, P. Adapting k-means for graph clustering. Knowl Inf Syst 64, 115–142 (2022). https://doi.org/10.1007/s10115-021-01623-y
+
+[4] Ulrike von Luxburg (2007), A Tutorial on Spectral Clustering, Max Planck Institute for Biological Cybernetics, Statistics and Computing, https://people.csail.mit.edu/dsontag/courses/ml14/notes/Luxburg07_tutorial_spectral_clustering.pdf
