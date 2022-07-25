@@ -18,7 +18,7 @@ This repository contains code or direction to packages that run various differen
 
 * Label Propagation
 * Kmeans
-* Ncut
+* Normalized Spectral Clustering (Ncut)
 * Louvain
 * Nonnegative Matrix Factorization Using Graph Random Walk (NMFR)
 
@@ -48,6 +48,16 @@ Though it is usually applied to euclidean data, the kmeans clustering method has
 Once the graph has been embedded into a lower-dimensional space where distance measures can be calculated, kmeans is an easy-to-use method that only requires a preset number of clusters to calculate. However, determining the best method to embed the graph tends to be the tricky part. There are also other adaptations of kmeans to graphs, such as the algorithms proposed by Sami Sieranoja & Pasi Fränti [3]. 
 
 ## Ncut
+
+The normalized spectral clustering method relies on two things: the Laplacian matrix, which is a transformation of the adjacency matrix discussed earlier, and eigenvalues, which are special scalars associated with a given matrix. It will then use the kmeans algorithm to cluster using the gathered eigenvalues, so in a sense ncut is a special case of kmeans. The basic algorithm for ncut can be described as follows:
+
+1) Compute the Laplacian matrix $L$.
+2) Compute the normalized Laplacian matrix $L$<sub>norm</sub>.
+3) Calculate the first $k$ eigenvectors $u_1, . . ., u_k$ of $L$<sub>norm</sub>, where $k$ is the number of clusters.
+4) Let $U$ be the matrix containing $u_1, . . ., u_k$ as columns.
+5) Form matrix $T$ by normalizing the rows of $U$ to norm 1.
+6) For $i = 1, . . . , n$, let $y_i$ be the vector corresponding to the $i$-th row of $T$.
+7) Cluster the points $(y_i)$<sub>i=1,...,n</sub> with the k-means algorithm into clusters $C_1, . . . , C_k$.
 
 ## Louvain
 
