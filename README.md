@@ -45,7 +45,7 @@ Though it is usually applied to euclidean data, the kmeans clustering method has
 4) Recalculate the positions of the centroids to be in the center of their associated nodes.
 5) Repeat steps (3) and (4) until no changes are made.
 
-Once the graph has been embedded into a lower-dimensional space where distance measures can be calculated, kmeans is an easy-to-use method that only requires a preset number of clusters to calculate. However, determining the best method to embed the graph tends to be the tricky part.
+Once the graph has been embedded into a lower-dimensional space where distance measures can be calculated, kmeans is an easy-to-use method that only requires a preset number of clusters to calculate. However, determining the best method to embed the graph tends to be the tricky part. There are also other adaptations of kmeans to graphs, such as the algorithms proposed by Sami Sieranoja & Pasi Fränti [3]. 
 
 ## Ncut
 
@@ -56,4 +56,7 @@ Once the graph has been embedded into a lower-dimensional space where distance m
 # References
 
 [1] Xiaojin Zhu and Zoubin Ghahramani, Learning from labeled and unlabeled data with label propagation (2002), Technical Report CMU-CALD-02–107, Carnegie Mellon University
-[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), Scikit-network: Graph Analysis in Python. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html.
+
+[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), Scikit-network: Graph Analysis in Python. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html
+
+[3] Sieranoja, S., Fränti, P. Adapting k-means for graph clustering. Knowl Inf Syst 64, 115–142 (2022). https://doi.org/10.1007/s10115-021-01623-y
