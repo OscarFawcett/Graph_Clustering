@@ -37,6 +37,16 @@ What is nice about the label propagation method is that it is easy to implement 
 
 ## Kmeans
 
+Though it is usually applied to euclidean data, the kmeans clustering method has adaptations to graphs. This is done by embedding the graph into another, low-dimensional space, then applying the typical kmeans methodology [2]. The basic algorithm can be described as follows:
+
+1) Embed the graph into a lower-dimensional space using any desired method.
+2) Initialize $k$ centroids randomly, where $k$ is the number of clusters in the graph.
+3) Assign each node to the nearest centroid in the newly embedded space.
+4) Recalculate the positions of the centroids to be in the center of their associated nodes.
+5) Repeat steps (3) and (4) until no changes are made.
+
+Once the graph has been embedded into a lower-dimensional space where distance measures can be calculated, kmeans is an easy-to-use method that only requires a preset number of clusters to calculate. However, determining the best method to embed the graph tends to be the tricky part.
+
 ## Ncut
 
 ## Louvain
@@ -46,3 +56,4 @@ What is nice about the label propagation method is that it is easy to implement 
 # References
 
 [1] Xiaojin Zhu and Zoubin Ghahramani, Learning from labeled and unlabeled data with label propagation (2002), Technical Report CMU-CALD-02–107, Carnegie Mellon University
+[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), Scikit-network: Graph Analysis in Python. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html.
