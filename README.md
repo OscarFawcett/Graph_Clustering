@@ -74,8 +74,6 @@ The Louvain method is based on optimizing for $modularity$ [5]. Though there are
 
 Much like the label propagation method, Louvain is easy to implement, quick to run, and doesn't require any prior information about the graphs. 
 
-## NMFR
-
 # References
 
 [1] Xiaojin Zhu and Zoubin Ghahramani (2002), *Learning from labeled and unlabeled data with label propagation*, Technical Report CMU-CALD-02–107, Carnegie Mellon University
