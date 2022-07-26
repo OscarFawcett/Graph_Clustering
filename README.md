@@ -63,14 +63,27 @@ The Ncut method is a very powerful clustering tool that runs quickly and doesn't
 
 ## Louvain
 
+The Louvain method is based on optimizing for $modularity$ [5]. Though there are a few different versions of $modularity$, the main principle is that for a graph to have a good modularity, there should be many edges within a given cluster, while the graph should be split up into many clusters with a small total amount of edges in each. The basic algorithm for the Louvain method can be described as follows:
+
+1) Initialized each node to be in its own cluster.
+2) Pick a node $u$ at random.
+3) Remove $u$ from its cluster and compute the removal gain in $modularity$ $\Delta Q$.
+4) For each cluster prevelent amongst $u$'s neighbors, calculate the add gain in $modularity$ $\Delta Q'$.
+5) If the highest total gain is positive ($\Delta Q' - \Delta Q > 0$), then move the node to that cluster.
+6) Repeat steps 2 - 5 for each node in the graph.
+
+Much like the label propagation method, Louvain is easy to implement, quick to run, and doesn't require any prior information about the graphs. 
+
 ## NMFR
 
 # References
 
-[1] Xiaojin Zhu and Zoubin Ghahramani, Learning from labeled and unlabeled data with label propagation (2002), Technical Report CMU-CALD-02–107, Carnegie Mellon University
+[1] Xiaojin Zhu and Zoubin Ghahramani (2002), $Learning from labeled and unlabeled data with label propagation$, Technical Report CMU-CALD-02–107, Carnegie Mellon University
 
-[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), Scikit-network: Graph Analysis in Python. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html
+[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), $Scikit-network: Graph Analysis in Python$. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html
 
-[3] Sieranoja, S., Fränti, P. Adapting k-means for graph clustering. Knowl Inf Syst 64, 115–142 (2022). https://doi.org/10.1007/s10115-021-01623-y
+[3] Sieranoja, S., Fränti, P. (2022), $Adapting k-means for graph clustering$. Knowl Inf Syst 64, 115–142. https://doi.org/10.1007/s10115-021-01623-y
 
-[4] Ulrike von Luxburg (2007), A Tutorial on Spectral Clustering, Max Planck Institute for Biological Cybernetics, Statistics and Computing, https://people.csail.mit.edu/dsontag/courses/ml14/notes/Luxburg07_tutorial_spectral_clustering.pdf
+[4] Ulrike von Luxburg (2007), $A Tutorial on Spectral Clustering$, Max Planck Institute for Biological Cybernetics, Statistics and Computing, https://people.csail.mit.edu/dsontag/courses/ml14/notes/Luxburg07_tutorial_spectral_clustering.pdf
+
+[5] Vincent D. Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre (2008) $Fast unfolding of communities in large networks$. Department of Mathematical Engineering, Universit́e catholique de Louvain, avenue Georges Lemaitre, B-1348 Louvain-la-Neuve, Belgium.
