@@ -78,12 +78,12 @@ Much like the label propagation method, Louvain is easy to implement, quick to r
 
 # References
 
-[1] Xiaojin Zhu and Zoubin Ghahramani (2002), $Learning from labeled and unlabeled data with label propagation$, Technical Report CMU-CALD-02–107, Carnegie Mellon University
+[1] Xiaojin Zhu and Zoubin Ghahramani (2002), *Learning from labeled and unlabeled data with label propagation*, Technical Report CMU-CALD-02–107, Carnegie Mellon University
 
-[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), $Scikit-network: Graph Analysis in Python$. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html
+[2] Thomas Bonald, Nathan de Lara, Quentin Lutz, Bertrand Charpentier (2020), *Scikit-network: Graph Analysis in Python*. Journal of Machine Learning Research, http://jmlr.org/papers/v21/20-412.html
 
-[3] Sieranoja, S., Fränti, P. (2022), $Adapting k-means for graph clustering$. Knowl Inf Syst 64, 115–142. https://doi.org/10.1007/s10115-021-01623-y
+[3] Sieranoja, S., Fränti, P. (2022), *Adapting k-means for graph clustering*. Knowl Inf Syst 64, 115–142. https://doi.org/10.1007/s10115-021-01623-y
 
-[4] Ulrike von Luxburg (2007), $A Tutorial on Spectral Clustering$, Max Planck Institute for Biological Cybernetics, Statistics and Computing, https://people.csail.mit.edu/dsontag/courses/ml14/notes/Luxburg07_tutorial_spectral_clustering.pdf
+[4] Ulrike von Luxburg (2007), *A Tutorial on Spectral Clustering*, Max Planck Institute for Biological Cybernetics, Statistics and Computing, https://people.csail.mit.edu/dsontag/courses/ml14/notes/Luxburg07_tutorial_spectral_clustering.pdf
 
-[5] Vincent D. Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre (2008) $Fast unfolding of communities in large networks$. Department of Mathematical Engineering, Universit́e catholique de Louvain, avenue Georges Lemaitre, B-1348 Louvain-la-Neuve, Belgium.
+[5] Vincent D. Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre (2008) *Fast unfolding of communities in large networks*. Department of Mathematical Engineering, Universit́e catholique de Louvain, avenue Georges Lemaitre, B-1348 Louvain-la-Neuve, Belgium.
